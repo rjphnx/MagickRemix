@@ -71,7 +71,7 @@ export class AgentHttpService<
     agentId: string,
     params: ServiceParams
   ): Promise<AgentHttpResponse | AgentHttpError> {
-    const { spellId, content, isCloud } = params.query as AgentHttpData
+    const { spellId, content } = params.query as AgentHttpData
 
     const agent = await getAgent(
       agentId,
@@ -117,7 +117,7 @@ export class AgentHttpService<
     data: AgentHttpData,
     params: ServiceParams
   ): Promise<AgentHttpResponse | AgentHttpError> {
-    const { content, isCloud } = data
+    const { content } = data
     const spellId = data?.spellId
 
     const agent = await getAgent(
@@ -165,7 +165,7 @@ export class AgentHttpService<
     data: AgentHttpData,
     params: ServiceParams
   ): Promise<AgentHttpResponse | AgentHttpError> {
-    const { content, isCloud } = data
+    const { content } = data
     const spellId = data?.spellId
 
     const agent = await getAgent(
@@ -212,7 +212,7 @@ export class AgentHttpService<
     agentId: string,
     params: ServiceParams
   ): Promise<AgentHttpResponse | AgentHttpError> {
-    const { spellId, content, isCloud } = params.query as AgentHttpData
+    const { spellId, content } = params.query as AgentHttpData
 
     const agent = await getAgent(
       agentId,
